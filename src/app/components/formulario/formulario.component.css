@@ -1,0 +1,60 @@
+.texto-for:focus-visible {
+  background-color: #0e3859;
+  color: bisque;
+}
+
+.formulario {
+  margin-top: 30px;
+  background-color: rgba(5, 32, 50, 1);
+  padding: 40px;
+}
+
+
+.label-for:focus-visible {
+  background-color: #0e3859;
+  color: beige;
+}
+
+.form-floating {
+  margin-bottom: 14px;
+}
+
+.input-lg {
+  font-size: 1.25rem;
+}
+
+.boton-registrar {
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 12px 24px; /* Espaciado interno */
+  text-align: center; /* Alineación centrada del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como elemento en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+
+.boton-registrar:hover {
+  background-color: #45a049; /* Cambiar el color de fondo al pasar por encima */
+}
+
+
+.titulo{
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: beige;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.texto-for{
+  margin-top: 10px;
+}
+
+.estilo-tf{
+  margin-top: 10px;
+}

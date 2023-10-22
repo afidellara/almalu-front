@@ -1,0 +1,21 @@
+.galeria{
+    width: 90%;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    transform: translateZ(20px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.galeria:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.noticias{
+    background-color: rgba(5, 32, 50, 1);
+}
+

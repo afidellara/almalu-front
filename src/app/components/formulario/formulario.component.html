@@ -1,0 +1,328 @@
+<section class="formulario">
+  <div class="container">
+    <form
+      class="form-estilo"
+      #adminForm="ngForm"
+      (submit)="agregarAdministrador(adminForm)"
+    >
+      <div class="row">
+        <div class="col-md-12">
+          <p class="titulo">{{ titulo }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control texto-for"
+              id="cedula"
+              name="cedula"
+              placeholder="Cedula: Ej: 10042845733"
+              [(ngModel)]="persona.cedula"
+              #cedula="ngModel"
+              [ngClass]="{ 'is-invalid': cedula.errors && cedula.touched }"
+              required
+              minlength="8"
+            />
+            <div
+              [hidden]="!cedula.errors?.['required']"
+              class="invalid-feedback"
+            >
+              Cedula requerido
+            </div>
+            <div
+              [hidden]="!cedula.errors?.['minlength']"
+              class="invalid-feedback"
+            >
+              Cedula debe contener al menos 8 caracteres
+            </div>
+            <label for="cedula" class="label-for">Cedula</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-selec">
+            <select
+              class="form-select form-select-lg texto-for"
+              aria-label=".form-select-lg example"
+              id="tipoDocumento"
+              name="tipoDocumento"
+              [(ngModel)]="persona.tipoDocumento"
+              #tipoDocumento="ngModel"
+              required
+              [ngClass]="{
+                'is-invalid': tipoDocumento.errors && tipoDocumento.touched
+              }"
+            >
+              <option disabled selected>Tipo de documento</option>
+              <option value="CC">Cedula de ciudadania</option>
+              <option value="PS">Pasaporte</option>
+              <option value="EX">Extranjero</option>
+              <option value="OT">Otro</option>
+            </select>
+            <div
+              [hidden]="!tipoDocumento.errors?.['required']"
+              class="invalid-feedback"
+            >
+              Tipo documento es requerido
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control texto-for"
+              id="nombres"
+              name="nombres"
+              placeholder="Escriba sus nombres"
+              [(ngModel)]="persona.nombres"
+              #nombres="ngModel"
+              [ngClass]="{ 'is-invalid': nombres.errors && nombres.touched }"
+              required
+              minlength="2"
+            />
+            <label for="nombres" class="label-for">Nombres</label>
+            <div
+              [hidden]="!nombres.errors?.['required']"
+              class="invalid-feedback"
+            >
+              Nombres requerido
+            </div>
+            <div
+              [hidden]="!nombres.errors?.['minlength']"
+              class="invalid-feedback"
+            >
+              Nombre tene contener al menos 2 caracteres
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control texto-for"
+              id="apellidos"
+              name="apellidos"
+              placeholder="Escriba sus apellidos"
+              [(ngModel)]="persona.apellidos"
+              #apellidos="ngModel"
+              [ngClass]="{
+                'is-invalid': apellidos.errors && apellidos.touched
+              }"
+              required
+              minlength="2"
+            />
+            <label for="apellidos" class="label-for">Apellidos</label>
+            <div
+              [hidden]="!apellidos.errors?.['required']"
+              class="invalid-feedback"
+            >
+              Apellidos requerido
+            </div>
+            <div
+              [hidden]="!apellidos.errors?.['minlength']"
+              class="invalid-feedback"
+            >
+              Apellidos tene contener al menos 2 caracteres
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <select
+            class="form-select form-select-lg texto-for"
+            aria-label=".form-select-lg example"
+            id="sexo"
+            name="sexo"
+            [(ngModel)]="persona.sexo"
+            #sexo="ngModel"
+            [ngClass]="{
+              'is-invalid': sexo.errors && sexo.touched
+            }"
+            required
+          >
+            <option selected>Sexo</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+          </select>
+          <div [hidden]="!sexo.errors?.['required']" class="invalid-feedback">
+            Sexo requerido
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-date">
+            <input
+              type="date"
+              class="form-control texto-for input-lg"
+              id="fechaNacimiento"
+              name="fechaNacimiento"
+              placeholder="Selecciona su fecha de nacimiento"
+              [(ngModel)]="persona.fechaNacimiento"
+              #fechaNacimientoNgModel="ngModel"
+              [ngClass]="{
+                'is-invalid': fechaNacimientoNgModel.invalid && fechaNacimientoNgModel.touched
+              }"
+              required
+            />
+            <div
+              [hidden]="!fechaNacimientoNgModel.invalid || !fechaNacimientoNgModel.touched" 
+              class="invalid-feedback"
+            >
+              Fecha de nacimiento requerido
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 estilo-tf">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control texto-for estilo-tf"
+              id="telefono"
+              name="telefono"
+              placeholder="Telefono: Ej: 3005732323"
+              [(ngModel)]="persona.telefono"
+              #telefono="ngModel"
+              [ngClass]="{
+                'is-invalid': telefono.errors && telefono.touched
+              }"
+              required
+              minlength="10"
+            />
+            <label for="telefono" class="label-for">Telefono</label>
+            <div
+              [hidden]="!telefono.errors?.['required']"
+              class="invalid-feedback"
+            >
+              Telefono requerido
+            </div>
+            <div
+              [hidden]="!telefono.errors?.['minlength']"
+              class="invalid-feedback"
+            >
+              Telefono debe contener al menos 10 caracteres
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 estilo-tf">
+          <select
+            class="form-select form-select-lg texto-for estilo-tf"
+            aria-label=".form-select-lg example"
+            id="ciudad"
+            name="ciudad"
+            [(ngModel)]="persona.ciudad"
+            #ciudad="ngModel"
+            [ngClass]="{
+              'is-invalid': ciudad.errors && ciudad.touched
+            }"
+            required
+          >
+            <option selected>Ciudad</option>
+            <option *ngFor="let ciudad of ciudades" value="{{ ciudad.nombre }}">
+              {{ ciudad.nombre }}
+            </option>
+          </select>
+          <div [hidden]="!ciudad.errors?.['required']" class="invalid-feedback">
+            Ciudad requerido
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control texto-for"
+              id="correo"
+              name="correo"
+              [(ngModel)]="persona.correo"
+              #correo="ngModel"
+              [ngClass]="{
+                'is-invalid': correo.errors && correo.touched
+              }"
+              required
+              placeholder="Correo: Ej: usuario@correo.com"
+              pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+            />
+            <div
+              [hidden]="!correo.errors?.['required']"
+              class="invalid-feedback"
+            >
+              Correo requerido
+            </div>
+            <div
+              [hidden]="!correo.errors?.['pattern']"
+              class="invalid-feedback"
+            >
+              Correo no es valido
+            </div>
+            <label for="correo" class="label-for">Correo</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control texto-for"
+              id="password"
+              name="password"
+              [(ngModel)]="persona.password"
+              #password="ngModel"
+              [ngClass]="{
+                'is-invalid': password.errors && password.touched
+              }"
+              required
+              placeholder="Escriba su contraseña"
+              minlength="6"
+              maxlength="15"
+            />
+            <label for="password" class="label-for">Contraseña</label>
+            <div
+              [hidden]="!password.errors?.['required']"
+              class="invalid-feedback"
+            >
+              Contraseña requerido
+            </div>
+            <div
+              [hidden]="!password.errors?.['minlength']"
+              class="invalid-feedback"
+            >
+              Contraseña debe contener al menos 6 caracteres
+            </div>
+            <div
+              [hidden]="!password.errors?.['maxlength']"
+              class="invalid-feedback"
+            >
+              Contraseña debe contener maximo 15 caracteres
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control texto-for"
+              id="password2"
+              name="password2"
+              placeholder="Repita su contraseña"
+            />
+            <label for="password2" class="label-for">Repita Contraseña</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <button [disabled]="!adminForm.valid" type="submit" class="boton-registrar">Registrar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

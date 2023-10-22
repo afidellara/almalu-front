@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand imagen-logo" routerLink="/"></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <div *ngIf="empleado && mostrarMenu()">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/"
+              ><span class="usuario">{{ empleado.nombres }}</span>
+            </a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" (click)="cerrarSession()">Cerrar Session </a>
+          </li>
+        </div>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin">Administrador</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

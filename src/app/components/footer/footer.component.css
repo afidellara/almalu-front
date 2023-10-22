@@ -1,0 +1,61 @@
+.fondo-footer{
+    background-color:  #0E3859
+}
+
+.nav-item{
+    margin-left: 10px;
+}
+
+.inicio{
+    background-image: url('/assets/inicio.png');
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+}
+
+.facebook{
+    background-image: url('/assets/facebook.png');
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+}
+
+.twitter{
+    background-image: url('/assets/twitter.png');
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+}
+
+.instagram{
+    background-image: url('/assets/instagram.png');
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+}
+
+.whatpsapp{
+    background-image: url('/assets/whatsapp.png');
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+}
+
+.texto{
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    color: bisque;
+    
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh; /* Opcional: ajusta la altura del contenedor según tus necesidades */
+  }
+  
+  

@@ -1,0 +1,143 @@
+.tabla{
+  background-color: rgba(5, 32, 50, 1);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.titulo-tabla{
+    text-align: center;
+    color: beige;
+}
+
+table{
+    margin-bottom: 30px;
+}
+
+
+/* efectos de la tabla iconos */
+.ingreso .elemento_valor,
+.ingreso .elemento_eliminar--btn {
+    color: #28B9B5;
+}
+
+.elemento_eliminar {
+  float: left;
+  
+}
+
+.elemento_eliminar--btn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  display: none;
+}
+
+.elemento_eliminar--btn:focus { outline: none; }
+.elemento_eliminar--btn:active { transform: translateY(2px); }
+
+.elemento:hover .elemento_eliminar--btn { display: block; }
+.elemento:hover .elemento_valor { transform: translateX(-20px); }
+
+
+.editar-btn{
+  background-image: url('/assets/001-editar.png');
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+}
+
+.eliminar-btn{
+  background-image: url('/assets/002-eliminar.png');
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+}
+
+.cabecero-tabla{
+  text-align: center;
+}
+
+.botones{
+  margin-left: 40px;
+  text-align: center;
+}
+
+
+/*Modal*/
+.fondo-modal{
+  background-color: rgba(5, 32, 50, 1);
+
+}
+
+.modal-title{
+  color: beige;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.formulario {
+  background-color: rgba(5, 32, 50, 1);
+  padding: 20px;
+}
+
+
+.label-for:focus-visible {
+  background-color: #0e3859;
+  color: beige;
+}
+
+.form-floating {
+  margin-bottom: 10px;
+}
+
+.input-lg {
+  font-size: 1.25rem;
+}
+
+.boton-actualizar {
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 12px 24px; /* Espaciado interno */
+  text-align: center; /* Alineación centrada del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como elemento en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+
+.boton-actualizar:hover {
+  background-color: #45a049; /* Cambiar el color de fondo al pasar por encima */
+}
+
+
+.boton-eliminar {
+  background-color: #ff0000; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 12px 24px; /* Espaciado interno */
+  text-align: center; /* Alineación centrada del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como elemento en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+
+.boton-eliminar:hover {
+  background-color: rgba(179, 14, 2, 1); /* Cambiar el color de fondo al pasar por encima */
+}
+
+.texto-for{
+  margin-top: 10px;
+}
+
+.estilo-tf{
+  margin-top: 10px;
+}
